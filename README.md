@@ -1,2 +1,0 @@
-# nidhu
-web lab
