@@ -2,107 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nidhi Koli - Resume</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- For icons -->
+    <title>Responsive Navbar with Dropdown</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="profile-pic">
-            <i class="fas fa-user-circle"></i> <!-- Placeholder for profile picture -->
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">MyWebsite</a>
+
+        <!-- Toggle Button (Mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+
+                <!-- DROPDOWN MENU -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button"
+                       data-bs-toggle="dropdown">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Web Design</a></li>
+                        <li><a class="dropdown-item" href="#">Development</a></li>
+                        <li><a class="dropdown-item" href="#">SEO</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Right Side Button -->
+            <button class="btn btn-outline-light">
+                Login
+            </button>
         </div>
-        <h1>Nidhi Koli</h1>
-        <p>Electronics and Telecommunication Engineer | Passionate about Innovation and Technology</p>
-        <div class="contact-info">
-            <i class="fas fa-envelope"></i> nidhi.koli@example.com |
-            <i class="fas fa-phone"></i> +91-1234567890 |
-            <i class="fab fa-linkedin"></i> linkedin.com/in/nidhikoli
-        </div>
-    </header>
-    
-    <section id="about">
-        <h2><i class="fas fa-user"></i> About Me</h2>
-        <p>Dedicated electronics engineer with a strong foundation in computer engineering and telecommunication systems. Eager to apply technical skills in innovative projects and contribute to cutting-edge technology solutions.</p>
-    </section>
-    
-    <section id="education">
-        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-        <div class="education-item">
-            <h3>Bachelor of Engineering (BE) in Electronics and Telecommunication</h3>
-            <p><strong>Institution:</strong> [University Name], [City, State] | <strong>Year:</strong> 2018-2022 | <strong>Grade:</strong> First Class</p>
-            <p>Focused on advanced topics like signal processing, network systems, and embedded electronics.</p>
-        </div>
-        <div class="education-item">
-            <h3>Diploma in Electronics and Computer Engineering</h3>
-            <p><strong>Institution:</strong> [Polytechnic College Name], [City, State] | <strong>Year:</strong> 2015-2018 | <strong>Grade:</strong> Distinction</p>
-            <p>Covered fundamentals of electronics, programming, and computer hardware.</p>
-        </div>
-    </section>
-    
-    <section id="experience">
-        <h2><i class="fas fa-briefcase"></i> Experience</h2>
-        <div class="experience-item">
-            <h3>Intern - Electronics Design</h3>
-            <p><strong>Company:</strong> [Company Name] | <strong>Duration:</strong> June 2021 - August 2021</p>
-            <p>Assisted in designing circuit boards and testing telecommunication devices. Gained hands-on experience with simulation tools.</p>
-        </div>
-        <div class="experience-item">
-            <h3>Project Assistant - Computer Engineering</h3>
-            <p><strong>Organization:</strong> [Organization Name] | <strong>Duration:</strong> January 2020 - May 2020</p>
-            <p>Worked on software development projects, including coding in C++ and Python for embedded systems.</p>
-        </div>
-    </section>
-    
-    <section id="skills">
-        <h2><i class="fas fa-tools"></i> Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Technical Skills</h3>
-                <ul>
-                    <li>Circuit Design & Analysis</li>
-                    <li>Microcontroller Programming (Arduino, Raspberry Pi)</li>
-                    <li>Programming Languages: C, C++, Python, Java</li>
-                    <li>Telecommunication Protocols (TCP/IP, GSM)</li>
-                    <li>Tools: MATLAB, Proteus, AutoCAD</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Soft Skills</h3>
-                <ul>
-                    <li>Problem-Solving</li>
-                    <li>Team Collaboration</li>
-                    <li>Project Management</li>
-                    <li>Communication</li>
-                    <li>Adaptability</li>
-                </ul>
+    </div>
+</nav>
+
+<!-- PAGE CONTENT -->
+<div class="container mt-5">
+    <h1 class="text-center">Welcome to MyWebsite</h1>
+    <p class="text-center">
+        This is a responsive web page using Bootstrap navigation bar with dropdown menu.
+    </p>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Service One</h5>
+                    <p class="card-text">Responsive web design using Bootstrap.</p>
+                </div>
             </div>
         </div>
-    </section>
-    
-    <section id="projects">
-        <h2><i class="fas fa-project-diagram"></i> Projects</h2>
-        <div class="project-item">
-            <h3>IoT-Based Home Automation System</h3>
-            <p>Developed a system using sensors and microcontrollers for remote control of home appliances. Technologies: Arduino, Wi-Fi module.</p>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Service Two</h5>
+                    <p class="card-text">Fast and modern UI components.</p>
+                </div>
+            </div>
         </div>
-        <div class="project-item">
-            <h3>Wireless Communication Network Simulator</h3>
-            <p>Simulated telecommunication networks using MATLAB to analyze signal strength and interference.</p>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Service Three</h5>
+                    <p class="card-text">Mobile-first responsive layout.</p>
+                </div>
+            </div>
         </div>
-    </section>
-    
-    <section id="certifications">
-        <h2><i class="fas fa-certificate"></i> Certifications</h2>
-        <ul>
-            <li>Certified in Embedded Systems (Coursera, 2022)</li>
-            <li>Python Programming Certification (Udemy, 2021)</li>
-            <li>Telecommunication Fundamentals (Online Course, 2020)</li>
-        </ul>
-    </section>
-    
-    <footer>
-        <p>&copy; 2023 Nidhi Koli. All rights reserved. | Designed with <i class="fas fa-heart"></i></p>
-    </footer>
+    </div>
+</div>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
